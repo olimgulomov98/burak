@@ -7,3 +7,9 @@
 
 // const person: string = "Martin";
 // const count: number = 100;
+
+// Architectural pattern: MVC, Dependency Injection, MVP
+
+// MVC - module view controller
+
+// Design pattern: Middleware, Decotar
