@@ -1,14 +1,11 @@
 // H-TASK
 
-function getReverse(str: string) {
-  // 1 method - by reverse
-  //   return str.split("").reverse().join("");
+function getPositive(arr: number[]) {
+  const positive: string[] = arr
+    .filter((num) => Number.isInteger(num) && num > 0)
+    .map((num) => num.toString());
 
-  // 2 method - by for loop
-  let result = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    result += str[i];
-  }
+  const result: string = positive.join("");
   return result;
 }
-console.log(getReverse("hello"));
+console.log(getPositive([1, -4, 2]));
