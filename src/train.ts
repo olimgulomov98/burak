@@ -1,11 +1,12 @@
-// H-TASK
+// I-TASK:
 
-function getPositive(arr: number[]) {
-  const positive: string[] = arr
-    .filter((num) => Number.isInteger(num) && num > 0)
-    .map((num) => num.toString());
-
-  const result: string = positive.join("");
-  return result;
+function getDigits(str: string) {
+  let digits: string = "";
+  for (let i = 0; i < str.length; i++) {
+    if (!isNaN(parseInt(str[i]))) {
+      digits += str[i];
+    }
+  }
+  return digits;
 }
-console.log(getPositive([1, -4, 2]));
+console.log(getDigits("m14i1t"));
