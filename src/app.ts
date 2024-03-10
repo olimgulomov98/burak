@@ -19,7 +19,7 @@ app.set("views", path.join(__dirname, "views")); // config qilib beradi
 app.set("view engine", "ejs"); // config qilib beradi
 
 /** 4-ROUTERS **/
-app.use("/admin", routerAdmin); // EJS
-app.use("/", router); // REACT
+app.use("/admin", routerAdmin); // EJS, SSR
+app.use("/", router); // REACT, SPA
 
 export default app;
