@@ -16,8 +16,8 @@ const store = new MongoDBStore({
 
 /** 1-ENTRANCE **/
 const app = express();
-app.use(express.static(path.join(__dirname, "public"))); // static - folder ni ochiq qilib beradi
-app.use(express.urlencoded({ extended: true })); // urlencoded - form dan kelayotgan request larni parse qilib object ga uzgartiradi
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan(MORGAN_FORMAT));
 
@@ -26,17 +26,17 @@ app.use(
   session({
     secret: String(process.env.SESSION_SECRET),
     cookie: {
-      maxAge: 1000 * 3600 * 3, // 3h
+      maxAge: 1000 * 3600 * 6, // 6h
     },
     store: store,
-    resave: true, // agar true bolsa vaqtii yangilanadi kirgan vaqtidan
+    resave: true,
     saveUninitialized: true,
   })
 );
 
 /** 3-VIEWS **/
-app.set("views", path.join(__dirname, "views")); // config qilib beradi
-app.set("view engine", "ejs"); // config qilib beradi
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
 /** 4-ROUTERS **/
 app.use("/admin", routerAdmin); // EJS, SSR
