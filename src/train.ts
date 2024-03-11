@@ -1,17 +1,13 @@
-// J-TASK:
+// K-TASK:
 
-function findLongestWord(input: string) {
-  let words: string[] = input.split(" ");
+function countVowels(str: string): number {
+  let vowels = ["a", "e", "i", "o", "u"];
+  let count = 0;
 
-  let longWord: string = "";
-  let maxLength: number = 0;
-
-  for (let word of words) {
-    if (word.length > maxLength) {
-      longWord = word;
-      maxLength = word.length;
-    }
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) count++;
   }
-  return longWord;
+  return count;
 }
-console.log(findLongestWord("I come from Uzbekistan"));
+
+console.log(countVowels("string"));
