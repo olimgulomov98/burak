@@ -4,8 +4,6 @@ import MemberService from "../models/Member.service";
 import { LoginInput, Member, MemberInput } from "../libs/types/member";
 import Errors from "../libs/Error";
 
-// REACT
-
 const memberService = new MemberService();
 
 const memberController: T = {};
