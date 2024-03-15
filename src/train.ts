@@ -1,13 +1,13 @@
-// L-TASK:
+// M-TASK:
 
-function reverseSentence(str: string): string {
-  return str
-    .split(" ")
-    .map((str) => str.split("").reverse().join(""))
-    .join(" ");
+function getSquareNumbers(numbers: number[]) {
+  return numbers.map((number) => {
+    const square = number ** 2;
+    return { number, square };
+  });
 }
 
-console.log(reverseSentence("we like coding!"));
+console.log(getSquareNumbers([1, 2, 3]));
 
 /* Project Standards:
   - Logging standards
