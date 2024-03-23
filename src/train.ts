@@ -1,13 +1,10 @@
-// TASK-O
+// TASK-P
 
-function calculateSumOfNumbers(arr: any[]): number {
-  return arr.reduce((ele, num) => {
-    if (typeof num === "number") return ele + num;
-    else return ele;
-  }, 0);
+function objectToArray(obj: { [key: string]: any }) {
+  return Object.entries(obj);
 }
 
-console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
+console.log(objectToArray({ a: 10, b: 20 }));
 
 /* Project Standards:
   - Logging standards
