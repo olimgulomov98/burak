@@ -1,14 +1,14 @@
-// TASK-Q
+// TASK-R
 
-function hasProperty(a: { [key: string]: any }, b: string) {
-  for (let key in a) {
-    if (key === b) {
-      return true;
-    }
-  }
-  return false;
+function calculate(str: string): number {
+  const numbers = str.split("+");
+
+  const result = numbers.reduce((acc, num) => acc + parseInt(num), 0);
+
+  return result;
 }
-console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
+
+console.log(calculate("1+3"));
 
 /* Project Standards:
   - Logging standards
